@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section --> 
+    <section id="home" class="section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div class="profile-container">
+                <img src="images/selfie.jpg" alt="Profile picture" class="profile-pic">
+            </div>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Juan! 👋🏼</h1>
+                <h2>I received a B.S. in Computer Science at CSUF 🐘 </h2>
+                <h2>Reach out if you would like to learn more!</h2>
+                <a href="#contact" class="contact-btn">Contact Me</a>
+            </div>
+        </section>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <h2>About Me</h2>
+        <div class="about-content">
+        <div class="image-content">
+            <img src="images/gradpic.jpg" alt="Portrait of you" class="about-photo">
+        </div>
+        <div class="text-content">
+            <p> Glad you’re still here! Let me share a little bit more about myself. I am a driven data analyst / 
+                software enginner from San Juan Capistrano, CA. I was raised by two incredibly hardworking Mexican immigrant 
+                parents who shaped me into the person I am today. I specialize primarily with MySQL for querying 
+                and Python libraries like Pandas, NumPy, Matplotlib and scikit-learn for wrangling, analyzing, and exploring datasets.
+                Regarding software engineering, I specialize primarily with front-end development using React. 
+            </p>
+            <p>
+                Outside of academics and work, I enjoy playing guitar, listening to music, working out, reading and 
+                hanging out with loved ones.
+            </p>
+            <p>
+                Enjoy the rest of the website!
+            </p>
+        </div> 
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <h2>My Work</h2>
+
+        <div class="project-grid">
+
+        <div class="project-card" onclick="toggleModal(this)">
+            <div class="project-preview">
+            <img src="images/cognisphere.png" alt="CogniSphere Screenshot" />
+            </div>
+            <p>CogniSphere 🧠</p>
+            <div class="badges">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>HTML/CSS</span>
+                <span>Figma</span>
+            </div>
+            <p> An award winning personalized web app designed to support cognitive health in older 
+                adults through engaging cognitive exercises, journaling tools, 
+                and social connection features.</p>
+            <a href="https://cognisphere-8a589.web.app/" target="_blank">View Website</a>  
+        </div>
+
+        <div class="project-card" onclick="toggleModal(this)">
+            <div class="project-preview">
+            <img src="images/tab.png" alt="Tab Screenshot" />
+            </div>
+            <p>Orange County Hospital Equity & Satisfaction Analysis 🏥</p>
+            <div class="badges">
+                <span>MySQL</span>
+                <span>Tableou</span>
+                <span>Excel</span>
+            </div>
+            <p> Curious which IPPS Orange County hospitals have the highest patient satisfaction? 
+                Explore this interactive dashboard and find out.</p>
+            <a href="https://public.tableau.com/views/OrangeCountyHCAHPSPatientSatisfactionScores/OCHCHAPSDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
+            target="_blank">View Interactive Dashboard</a>  
+        </div>
+
+        <div class="project-card" onclick="toggleModal(this)">
+            <div class="project-preview">
+            <img src="images/332.png" alt="Tab Screenshot" />
+            </div>
+            <p>Student Scheduling & Grade Management System ✍ </p>
+            <div class="badges">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>HTML/CSS</span>
+            </div>
+            <p> A PHP + MySQL web app for viewing professor schedules, course sections, 
+                grade distributions, and student academic records.</p>
+            <a href="https://github.com/juanaguirre30/cs332-student-course-app" 
+            target="_blank">View GitHub Repo</a>
+        </div>
+
+        <div class="project-card" onclick="toggleModal(this)">
+            <div class="project-preview">
+            <img src="images/spam.png" alt="Tab Screenshot" />
+            </div>
+            <p>Spam Filter Development 📩</p>
+            <div class="badges">
+                <span>Jupyter Notebook</span>
+                <span>Python</span>
+            </div>
+            <p> Tired of spam cluttering your inbox? This algorithm detects and filters spam emails with 93% accuracy, 
+                trained and tested entirely in Jupyter Notebook as part of a CSUF AI course.</p>
+            <a href="https://github.com/AI-481-Team/NaiveBayesClassifier" 
+            target="_blank">View GitHub Repo</a>
+        </div>
+        
+  </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <div class="contact-card">
+            <h2>Contact 📫</h2>
+            <p>Feel free to reach out via email or LinkedIn 😊</p>
+            
+            <div class="contact-info">
+            <a href="mailto:juanaguirre158@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> juanaguirre158@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/juanaguirre30" target="_blank" class="contact-link">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function toggleModal(card) {
+      const currentlyOpen = document.querySelector('.card.show');
+      if (currentlyOpen && currentlyOpen !== card) {
+        currentlyOpen.classList.remove('show');
+      }
+      card.classList.toggle('show');
+    }
+
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('.card')) {
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('show'));
+      }
+    });
+  </script>
+
+    <script src="script.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+</html>
